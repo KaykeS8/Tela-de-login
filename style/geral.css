@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2? family= Merriweather:wght@400;700 & display=swap');
+@import url('https://fonts.googleapis.com/css2? family= Lato:wght@400;700 & display=swap');
+
+/*Variáveis*/
+:root {
+  --green: #04c35c;
+  --blue: #2b6cb0;
+
+  --white: #ffffff;
+  --white300: #f7fafc;
+
+  --dark: #1a202c;
+  --input: #e8e8e8;
+
+  --font-title: 'Merriweather', serif;
+  --font-paragraph: 'Lato', sans-serif;
+}
+
+/*Reset*/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  font-size: 1.6rem;
+  text-rendering: optimizeSpeed;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button,
+input {
+  border: 0;
+}
+
+button:focus,
+input:focus {
+  border: 0;
+}
+
+/* MAIN */
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--white);
+}
+
+.img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 100vh;
+  background-color: var(--white300);
+}
+
+.img img {
+  background-position: center;
+  background-size: cover;
+  width: 40rem;
+  padding: 1rem;
+}
+
+/* TELA DE LOGIN */
+
+.cadastrar {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin: 0 auto;
+  height: 100vh;
+  padding: 1rem;
+}
+
+.cadastrar p {
+  font-family: var(--font-title);
+  font-weight: 400;
+  font-size: 1.6rem;
+  margin-bottom: 5px;
+  color: var(--dark);
+}
+
+.cadastrar h1 {
+  font-family: var(--font-title);
+  font-weight: 700;
+  font-size: 2.6rem;
+  color: var(--dark);
+  margin-bottom: 2rem;
+}
+
+.cadastrar label {
+  font-family: var(--font-paragraph);
+  font-size: 1.4rem;
+  color: var(--dark);
+}
+
+input[data-check="valido"]#email{
+  border-color: var(--green);
+}
+
+input[data-check="invalido"]#email {
+  border:1px solid red;
+}
+
+.cadastrar #email, #senha {
+  padding: 10px;
+  border: 1px solid var(--input);
+  outline: var(--input);
+  border-radius: .5rem;
+  margin: 1rem 0;
+}
+
+#senha {
+  margin-bottom: 2rem;
+}
+
+.verificacao {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.check {
+  display: flex;
+  align-items: center;
+}
+
+.check label {
+  font-size: 1.2rem;
+  margin-left: .5rem;
+}
+
+
+.verificacao a {
+  font-family: var(--font-paragraph);
+  font-size: 1.2rem;
+  color: var(--blue);
+}
+
+.btn-entrar {
+  font-family: var(--font-paragraph);
+  background: var(--green);
+  padding: 1rem 3rem;
+  border-radius: .5rem;
+  margin-bottom: 1rem;
+  color: var(--white);
+  cursor: pointer;
+}
+
+.btn-login {
+  display: flex;
+  align-items: center;
+  font-family: var(--font-paragraph);
+  padding: 1rem 3rem;
+  border-radius: .5rem;
+  background: var(--dark);
+  color: var(--white);
+  cursor: pointer;
+}
+
+.btn-login img {
+  width: 1.6rem;
+  height: 1.6rem;
+  margin-right: 1rem;
+}
+
+
+.paragrafo p {
+  font-family: var(--font-paragraph);
+  font-weight: 400;
+  font-size: 1.4rem;
+  text-align: center;
+  color: var(--dark);
+  margin-top: 15rem;
+}
+
+.paragrafo span {
+  color: var(--blue);
+  cursor: pointer;
+}
+
+/* REPONSIVIDADE */
+
+@media screen and (max-width:1240px) {
+  .paragrafo p {
+    margin-top: 7rem;
+  }
+}
+
+@media screen and (max-width:850px) {
+  .img {
+    display: none;
+  }
+
+  .cadastrar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    margin: 4rem auto;
+  }
+}
+
+@media screen and (max-width:540px) {
+  .img {
+    display: none;
+  }
+
+  .cadastrar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    margin: 2rem auto;
+  }
+
+  .paragrafo p {
+    margin-top: 10rem;
+  }
+}
+
