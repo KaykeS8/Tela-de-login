@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Login</title>
+</head>
+
+<body>
+
+    <main class="main">
+        <div class="img">
+            <img src="image/image.svg" alt="Ilustração">
+        </div>
+        <form class="cadastrar" id="login">
+            <p>Bem vindo de volta</p>
+            <h1>Faça login na sua conta</h1>
+            <label for="email">E-mail</label>
+            <input type="email" name="email" id="email" required>
+            <label for="senha">Senha</label>
+            <input type="password" name="senha" id="senha" required>
+            <div class="verificacao">
+                <div class="check">
+                    <input type="radio" name="lembra" id="verifica">
+                    <label for="lembra">Lembre de mim</label>
+                </div>
+                <a href="#">Esqueceu sua senha?</a>
+            </div>
+            <button type="submit" class="btn-entrar" data-modal="abrir">Entrar</button>
+            <button type="submit" class="btn-login"><img src="image/iconfinder_Google_1298745 1.png"
+                    alt="logo do google"> Ou faça login com o Google </button>
+
+            <div class="paragrafo">
+                <p>Não tem uma conta? <span>Cadastre-se</span></p>
+            </div>
+        </form>
+
+        <section class="modal-container" data-modal="container">
+            <div class="modal">
+                <h1>Login realizado com sucesso</h1>
+                <button data-modal="fechar" class="fechar">X</button>
+                <div class="img-modal">
+                    <img src="image/check-circle-solid-84.png" alt="verificação">
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <script src="js/script.js" type="module"></script>
+</body>
+
+</html>
