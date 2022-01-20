@@ -69,7 +69,8 @@
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, .3);
     font-size: 1.2rem;
     color: white;
-    font-family: 'IBM plex Mono', monospace;
+    font-family: var(--font-paragraph);
+    font-size: 1.6rem;
     cursor: pointer;
 }
 
